@@ -8,9 +8,9 @@ fn main() -> std::io::Result<()> {
 
     let mut line = String::new();
 
-    let mut max_calories: u32 = 0;
     let mut number_of_elves: u32 = 0;
 
+    let mut top_three_elves: [u32; 3] = [0, 0, 0];
 
     let mut current_elf_calories: u32 = 0;
     loop {
@@ -30,9 +30,7 @@ fn main() -> std::io::Result<()> {
 
                 if trimmed_line.len() == 0 {
                     number_of_elves += 1;
-                    if max_calories < current_elf_calories {
-                        max_calories  = current_elf_calories;
-                    }
+                    check_top_elves(&mut top_three_elves, current_elf_calories);
                     current_elf_calories = 0;
                 }
                 else {
@@ -44,8 +42,18 @@ fn main() -> std::io::Result<()> {
         
     }
 
+    let top_three_sum = top_three_elves[0] + top_three_elves[1] + top_three_elves[2];
     println!("Number of elves: {}", number_of_elves);
-    println!("Max calories on elf: {}", max_calories);
+    println!("Max calories: {:?}", top_three_elves);
+    println!("Sum of top 3 elves: {:?}", top_three_sum);
 
     Ok(())
+}
+
+fn check_top_elves(elves_array: &mut [u32; 3], new_calories: u32) -> &[u32; 3] {
+    if new_calories > elves_array[0] {
+        elves_array[0] = new_calories
+    }
+    elves_array.sort();
+    elves_array
 }
