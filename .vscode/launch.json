@@ -1,0 +1,304 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-1'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-1",
+          "--package=aoc-1"
+        ],
+        "filter": {
+          "name": "aoc-1",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-1'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-1",
+          "--package=aoc-1"
+        ],
+        "filter": {
+          "name": "aoc-1",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-2'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-2",
+          "--package=aoc-2"
+        ],
+        "filter": {
+          "name": "aoc-2",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-2'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-2",
+          "--package=aoc-2"
+        ],
+        "filter": {
+          "name": "aoc-2",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-3'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-3",
+          "--package=aoc-3"
+        ],
+        "filter": {
+          "name": "aoc-3",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-3'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-3",
+          "--package=aoc-3"
+        ],
+        "filter": {
+          "name": "aoc-3",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-4'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-4",
+          "--package=aoc-4"
+        ],
+        "filter": {
+          "name": "aoc-4",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-4'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-4",
+          "--package=aoc-4"
+        ],
+        "filter": {
+          "name": "aoc-4",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-5'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-5",
+          "--package=aoc-5"
+        ],
+        "filter": {
+          "name": "aoc-5",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-5'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-5",
+          "--package=aoc-5"
+        ],
+        "filter": {
+          "name": "aoc-5",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-6'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-6",
+          "--package=aoc-6"
+        ],
+        "filter": {
+          "name": "aoc-6",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-6'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-6",
+          "--package=aoc-6"
+        ],
+        "filter": {
+          "name": "aoc-6",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-7'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-7",
+          "--package=aoc-7"
+        ],
+        "filter": {
+          "name": "aoc-7",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-7'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-7",
+          "--package=aoc-7"
+        ],
+        "filter": {
+          "name": "aoc-7",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'aoc-8'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=aoc-8",
+          "--package=aoc-8"
+        ],
+        "filter": {
+          "name": "aoc-8",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'aoc-8'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=aoc-8",
+          "--package=aoc-8"
+        ],
+        "filter": {
+          "name": "aoc-8",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

@@ -5,7 +5,7 @@ enum FileType {
     Dir(Directory)
 }
 struct File {
-    filename: String,
+    _filename: String,
     size: u32
 }
 struct Directory {
@@ -26,7 +26,7 @@ struct Command {
 impl File {
     fn new(name: String, file_size: u32) -> File {
         File {
-            filename: name,
+            _filename: name,
             size: file_size
         }
     }
