@@ -26,9 +26,7 @@ fn calculate_visibility(heightmap: &Vec<Vec<u32>>) -> (u32, u32) {
     for row in 0..heightmap.len() {
         for col in 0..heightmap[0].len()  {
             let visibility = is_tree_visible(&heightmap, row, col);
-            if visibility.0 {
-                visibility_grid[row][col] = 1;
-            }
+            visibility_grid[row][col] = if visibility.0 { 1 } else { 0 };
             scenic_score_grid[row][col] = visibility.1;
         }
     }
