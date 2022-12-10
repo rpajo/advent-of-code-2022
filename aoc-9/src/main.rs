@@ -60,7 +60,6 @@ fn move_rope(head: &RopePosition, tail: &RopePosition) -> RopePosition {
     let diff = position_diff(&head_pos, &tail_pos);
     if diff.0.abs() > 1 || diff.1.abs() > 1 {
         let tail_move_vector = (diff.0 - (diff.0/2), diff.1 - (diff.1/2));
-
         tail_pos = (tail_pos.0 + tail_move_vector.0, tail_pos.1 + tail_move_vector.1);
     }
 
