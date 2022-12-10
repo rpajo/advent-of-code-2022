@@ -19,37 +19,19 @@ fn main() -> std::io::Result<()> {
         .map(|line| parse_instruction(line.trim_end()))
         .collect();
 
-    let result = process_instructions(&instructions);
+    let result = process_signal(&instructions);
     println!("Part 1: {}\n", result);
-
-    draw_signal(&instructions);
 
     Ok(())
 }
 
-fn process_instructions(instructions: &Vec<InstructionSet>) -> i32 {
-    let mut register_value: i32 = 1;
+fn process_signal(instructions: &Vec<InstructionSet>) -> i32 {
+    let mut sprite_pos = 1;
+
+    // part 1
     let mut cycle_check = 20;
     let mut signal_strength_sum: i32 = 0;
-    
     let mut cycle = 0;
-    for instruction in instructions  {
-        if cycle + instruction.cycles >= cycle_check {
-            let cycle_strength = register_value * (cycle_check as i32);
-            signal_strength_sum += cycle_strength;
-            cycle_check += 40;
-        }
-
-        let arg = instruction.arg.unwrap_or_default();
-        register_value = register_value + arg;
-        cycle += instruction.cycles;
-    }
-
-    signal_strength_sum
-}
-
-fn draw_signal(instructions: &Vec<InstructionSet>) {
-    let mut sprite_pos = 1;
 
     let mut idx = 0;
     let mut instruction_iter = instructions.iter();
@@ -57,11 +39,11 @@ fn draw_signal(instructions: &Vec<InstructionSet>) {
         let cycles_remaining = instruction.cycles;
 
         for _ in 0..cycles_remaining {
-            if sprite_pos - 1 <= idx && sprite_pos + 1 >= idx {
-                print!("#");
+            if sprite_pos - 1 <= idx && sprite_pos + 1 >= idx { 
+                print!("🟩"); 
             }
-            else {
-                print!(".");
+            else { 
+                print!("  "); 
             }
 
             idx += 1;
@@ -69,10 +51,16 @@ fn draw_signal(instructions: &Vec<InstructionSet>) {
                 idx = 0;
                 println!();
             }
+            cycle += 1;
+            if cycle == cycle_check {
+                signal_strength_sum += sprite_pos * (cycle_check as i32);
+                cycle_check += 40;
+            }
         }
         sprite_pos = sprite_pos + instruction.arg.unwrap_or_default();
-
     }
+
+    signal_strength_sum
 }
 
 fn parse_instruction(line: &str) -> InstructionSet {
