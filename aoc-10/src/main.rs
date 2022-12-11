@@ -1,9 +1,7 @@
-#[derive(Debug)]
 enum Instruction {
-    Noop = 1,
-    Addx = 2,
+    Noop,
+    Addx,
 }
-#[derive(Debug)]
 struct InstructionSet {
     _instruction: Instruction,
     cycles: u32,
@@ -12,7 +10,7 @@ struct InstructionSet {
 
 
 fn main() -> std::io::Result<()> {
-    println!("🎄 Advent of Code 2022 - 6 🎄\n");
+    println!("🎄 Advent of Code 2022 - 11 🎄\n");
 
     let input = include_str!("../../inputs/10/input.txt");
     let instructions: Vec<InstructionSet> = input.lines()
