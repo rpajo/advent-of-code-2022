@@ -12,7 +12,7 @@ struct Node {
 struct Position {
     x: usize,
     y: usize
- }
+}
 
 impl Ord for Position {
     fn cmp(&self, other: &Self) -> Ordering {
