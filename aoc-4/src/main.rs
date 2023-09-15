@@ -8,14 +8,14 @@ fn main() -> std::io::Result<()> {
     let mut full_overlaps: u32 = 0;
     let overlaps: u32 = input.lines()
         .map(| line | line.trim_end())
-        .map(| line | parse_input(&line))
+        .map(parse_input)
         .map(| assignments | find_area_overlaps(&assignments))
         .map(| overlap | {
             // println!("Overlap: {:?}, is full overlap: {}", overlap.0, overlap.1);
             if overlap.1 {
                 full_overlaps += 1;
             }
-            if overlap.0 > 0 { 1 } else { 0 }
+            u32::from(overlap.0 > 0)
         }).sum();
 
 

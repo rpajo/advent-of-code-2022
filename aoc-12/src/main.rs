@@ -118,8 +118,8 @@ fn find_shortest_path(start: &Position, end: &Position, grid: &Vec<Vec<u32>>) ->
 }
 
 fn get_heuristic(pos: &Position, goal: &Position) -> u32 {
-    let dx = (goal.x as i32 - pos.x as i32).abs() as u32;
-    let dy = (goal.y as i32 - pos.y as i32).abs() as u32;
+    let dx = (goal.x as i32 - pos.x as i32).unsigned_abs();
+    let dy = (goal.y as i32 - pos.y as i32).unsigned_abs();
     dx + dy
 }
 

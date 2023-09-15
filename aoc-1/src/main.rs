@@ -28,7 +28,7 @@ fn main() -> std::io::Result<()> {
             Ok(_bytes) => {
                 let trimmed_line = line.trim_end();
 
-                if trimmed_line.len() == 0 {
+                if trimmed_line.is_empty() {
                     number_of_elves += 1;
                     check_top_elves(&mut top_three_elves, current_elf_calories);
                     current_elf_calories = 0;

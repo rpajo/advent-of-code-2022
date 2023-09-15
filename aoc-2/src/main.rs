@@ -33,7 +33,7 @@ fn main() -> std::io::Result<()> {
             Ok(_bytes) => {
                 let trimmed_line = line.trim_end();
                 
-                let round = parse_round(&trimmed_line);
+                let round = parse_round(trimmed_line);
                 let my_play = match_play(&round);
                 let score = count_score(&my_play, &round.1);
                 // println!("Player won: {:?}, score: {}", outcome, score);
@@ -49,7 +49,7 @@ fn main() -> std::io::Result<()> {
 }
 
 fn parse_round(input: &str) -> (Play, Outcome) {
-    let play_inputs: Vec<&str> = input.split(" ").collect();
+    let play_inputs: Vec<&str> = input.split(' ').collect();
     let opponent = char_to_play(play_inputs[0]);
     let outcome = char_to_outcome(play_inputs[1]);
 
